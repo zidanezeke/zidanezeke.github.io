@@ -1,0 +1,506 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.preloader{
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 150;
+    -webkit-display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.preloader.opacity-0{
+    opacity: 0;
+}
+
+.preloader .loader{
+    height: 40px;
+    width: 40px;
+    border: 4px solid white;
+    border-radius: 50%;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+        
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    padding: 30px 0;
+    background-color: aliceblue;
+}
+
+.burger{
+    display: none;
+}
+
+.section{
+    padding-top: 10px;
+}
+
+.container{
+    margin: 0 250px;
+}
+
+.navbar-inner{
+    text-align: center;
+    justify-content: space-between;
+}
+
+.navbar-items{
+    list-style: none;
+}
+
+.navbar-items li{
+    display: inline-block;
+}
+
+.navbar-items li a{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    margin: 8px 20px;
+    padding: 8px 0px;
+}
+
+.navbar-items li a.active,
+.navbar-items li a:hover{
+    border-bottom: 3px solid black;
+}
+
+.home{
+    padding-top: 150px;
+}
+
+.home-inner{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.profile-picture{
+    margin: 0 100px;
+    margin-bottom: 20px;
+}
+
+.profile-picture img{
+    border-radius: 50%;
+    border: 4px solid white;
+    height: 400px;
+}
+
+.shadow-dark{
+    -webkit-box-shadow: 0 0 20px rgba(48, 46);
+    box-shadow: 0 0 20px rgba(48, 46);
+}
+
+.intro h3{
+    font-size: 70px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(5, 170, 162);
+    margin-bottom: 30px;
+}
+
+.social-media{
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 30px;   
+}
+
+.social{
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 30px;
+    color: blue;
+}
+
+.social:hover{
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3 ease;
+    background-image: linear-gradient(to left, #1290cb, #0652dd);
+    color: white;
+    border: none;
+}
+
+.CV{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    background: linear-gradient(to left, #1290cb, #0652dd);
+    padding: 10px 25px;
+    border-radius: 25px;
+    color: white;
+}
+
+.CV:hover{
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 17px;
+    padding: 16px 21px;
+}
+
+.subtitle{
+    margin-top: 150px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.about-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-content{
+    max-width: 50%;
+}
+
+.about-content{
+    padding: 0 50px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.skills{
+    width: 50%;
+    padding: 0 50px;
+}
+
+.skills li{
+    position: relative;
+    list-style: none;
+    margin: 60px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.skills li:before{
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: teal;
+    border-radius: 100px;
+}
+
+.skills li:after{
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0%;
+    height: 15px;
+    background-color: teal;
+    border-radius: 100px;
+}
+
+.frame{
+    float: left;
+    width: 50%;
+}
+
+.gallery{
+    margin: 30px;
+}
+
+.gallery:hover{
+    transform: scale(1.05);
+    transition: all 0.3 ease;
+}
+
+.gallery img{
+    width: 100%;
+    height: 400px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.description{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 20px;
+    color: black;
+}
+
+.experience-inner:after{
+    content: none;
+    clear: both;
+    display: block;
+}
+
+.frame a{
+    text-decoration: none;
+}
+
+.portfolio-inner:after{
+    content: "";
+    clear: both;
+    display: black;
+}
+
+.contact-form{
+    margin: 0 20%;
+    padding: 40px 40px;
+}
+
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.msg{
+    width: 100%;
+}
+
+.input-fields .input,
+.msg textarea{
+    margin: 30px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid blue;
+    padding: 12px;
+    color: black;
+    width: 100%;
+    font-weight: 500;
+}
+
+.msg textarea{
+    height: 150px;
+}
+
+.btn{
+    text-align: center;
+    background: rgb(93, 93, 228);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+
+}
+
+.btn:hover{
+    background: #0652dd;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.copyright{
+    text-align: center;
+    margin: 100px 0;
+    font-weight: 500;
+}
+
+@media (max-width: 1440px){
+    .container{
+        margin: 0 150px;
+    }
+
+    .profile-pic{
+        margin: 50px;
+        margin-bottom: 20px;
+    }
+
+    .profile-pic img{
+        height: 300px;
+    }
+
+    .intro h3{
+        font-size: 40px;
+    }
+
+    .about-inner{
+        display: block;
+        width: 100%;
+    }
+
+    .about-content{
+        max-width: 100%;
+    }
+
+    .about-content p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .skills{
+        width: 85%;
+        padding: 0 25px;
+        margin: 0 auto;
+        height: 250px;
+    }
+
+    .skills ul{
+        padding-top: 1px;
+    }
+
+    .skills li{
+        margin: 40px 0;
+    }
+
+    .gallery img{
+        height: 300px;
+    }
+
+    .description{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px){
+    .navbar{
+        padding-bottom: 0px;
+    }
+
+    .burger{
+        display: block;
+        font-size: 26px;
+        line-height: 70px;
+        text-align: right;
+    }
+
+    .menu-btn{
+        cursor: pointer;
+    }
+
+    .navbar-items{
+        width: 100%;
+        text-align: center;
+    }
+
+    .close{
+        display: none;
+    }
+
+    .navbar-items li a.active,
+    .navbar-items a.hover{
+        border-bottom: none;
+    }
+
+    .navbar-items li{
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid white;
+        margin: 0;
+        width: 100%;
+    }
+
+    .frame{
+        width: 100%;
+    }
+
+    .contact-form{
+        margin: 0 2%;
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 800px){
+    .container{
+        margin: 0 20px;
+    }
+
+    .profile-pic{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-pic img{
+        height: 200px;
+    }
+
+    .intro h3{
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .subtitle{
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .about-content p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .skills li{
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .gallery img{
+        height: 300px;
+    }
+
+    .contact-form{
+        margin: 0 10%;
+    }
+
+    .input-fields .input,
+    .msg textarea{
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 400px){
+    .social{
+        font-size: 20px;
+    }
+
+    .contact-form{
+        margin: 0 2%;
+        padding: 10px 10px;
+    }
+}
